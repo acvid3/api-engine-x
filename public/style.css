@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  width: 1200px;
+}
+
+.form-container,
+.response-container {
+  margin: 20px 0;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.text-input,
+.text-area {
+  width: 100%;
+  padding: 10px;
+}
+
+.submit-button {
+  cursor: pointer;
+  font-size: 16px;
+  height: 39px;
+  width: 200px;
+  background: #32a852;
+  color: #fff;
+  border-radius: 5px;
+  border: 0;
+  transition: 0.5s;
+}
+
+.submit-button:hover {
+  transform: scale(1.1);
+}
+
+#appNameInput,
+#tokenResponse {
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #32a852;
+}
+
+.response-details {
+  height: 400px;
+  width: 500px;
+}

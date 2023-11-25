@@ -1,5 +1,5 @@
-const puppeteerManager = require("../services/puppeteerManager");
-const tokenUtil = require("../utils/tokenUtil");
+const tokenUtil = require("../utils/token-util");
+const puppeteerManager = require("../services/puppeteer-manager");
 
 exports.generateToken = async (req, res) => {
   const { appName } = req.body;
@@ -7,7 +7,7 @@ exports.generateToken = async (req, res) => {
     return res.status(400).send("App name is required");
   }
 
-  const token = tokenUtil.createToken(appName);
-  await puppeteerManager.createSession(token);
+  const { token, expiryTime } = tokenUtil.createTokenWithExpiry(appName);
+  await puppeteerManager.createSession(token, expiryTime);
   res.json({ token });
 };
