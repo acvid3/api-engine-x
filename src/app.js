@@ -1,4 +1,5 @@
 const express = require("express");
+require("dotenv").config();
 const authRoutes = require("./routes/auth-routes");
 const collectionsRoutes = require("./routes/collections-routes");
 
