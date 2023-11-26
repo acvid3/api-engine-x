@@ -28,8 +28,6 @@ class PuppeteerManager {
       waitUntil: "networkidle0",
     });
 
-    await page.screenshot({ path: `./scrapingbee_homepage.jpg` });
-
     this.sessions[token] = { browser, page, expiryTime };
 
     const timeLeft = expiryTime * 1000 - Date.now();
